@@ -106,7 +106,7 @@ jobs:
               pnpm build:server
 
               # Server reload
-              pnpm reload:server && \
+              pm2 reload ./api-server/ecosystem.config.js && \
               pm2 ls && \
               pm2 save
           EOF
